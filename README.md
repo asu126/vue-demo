@@ -1,3 +1,18 @@
+# 环境准备
+
+```
+# 安装webpack
+> npm install webpack -g
+
+# 安装vue脚手架
+> npm install vue-cli -g
+
+# init
+vue init webpack-simple 工程名字<工程名字不能用中文>
+或者创建 vue1.0 的项目
+vue init webpack-simple#1.0 工程名字<工程名字不能用中文>
+```
+
 # vue-demo
 
 > A Vue.js project
