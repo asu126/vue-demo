@@ -2,7 +2,12 @@
   <div id="app">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
-    <firstcomponent></firstcomponent>
+    <h2>test</h2>
+    <ul>
+      <li><router-link to="/first">Go to 1th</router-link></li>
+      <li><router-link to="/second">Go to 2th</router-link></li>
+    </ul>
+    <router-view></router-view>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -21,16 +26,13 @@
 </template>
 
 <script>
-import firstcomponent from './component/firstcomponent.vue'
-
 export default {
   name: 'app',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  },
-  components: { firstcomponent }
+  }
 }
 </script>
 
