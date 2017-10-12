@@ -32,5 +32,10 @@ npm run build
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-# routr view
+# routr vue
 https://router.vuejs.org/zh-cn/essentials/getting-started.html
+
+# more demo reference
+- https://github.com/lzxb/vue2-demo 登录退出功能
+- https://github.com/kenberkeley/vue-demo 简易留言板
+- https://github.com/cnu4/Webpack-Vue-MultiplePage 在多页面项目下使用 Webpack + Vue
