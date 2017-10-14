@@ -1,66 +1,53 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>test</h2>
-    <ul>
-      <li><router-link to="/first">Go to 1th</router-link></li>
-      <li><router-link to="/second">Go to 2th</router-link></li>
-    </ul>
+  <div>
+    <navbar></navbar>
+
+    <div class="row m-0 p-5">
+      <div class="col-md-2 col-sm-3 col-xs-12">
+        <sidebar></sidebar>
+      </div>
+    </div>
     <router-view></router-view>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
   </div>
 </template>
-
 <script>
+/* 根组件就像是 AngularJS 的 $rootScope，同时也负责全局布局 */
+import Navbar from './components/Navbar.vue'
+import Sidebar from './components/Sidebar/index.vue'
+import Breadcrumb from './components/Breadcrumb.vue'
+
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  // 路由会自动将该组件挂载到 #app 上
+  // el: () => '#app',
+
+  components: { Navbar, Sidebar, Breadcrumb },
+
+  // 注意：顶级变量必须设置默认值方能引入 observer
+  data: () => ({
+    showInNavbar: { exact: true },
+    showInSidebar: true,
+    userData: null
+  })
 }
 </script>
-
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.p-5 {
+  padding: 5px;
+}
+.p-15 {
+  padding: 15px;
+}
+.main-content {
+  min-height: 300px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+/* 全局通用的 router-view 过渡效果 */
+.fade-transition {
+  transition: opacity .1s ease;
+}
+.fade-enter, .fade-leave {
+  opacity: 0;
 }
 
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
