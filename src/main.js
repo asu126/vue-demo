@@ -39,6 +39,13 @@ const Parent = {
   `
 }
 
+// register 注册一个全局组件
+// 注意确保在初始化根实例之前注册组件
+Vue.component('my-component', {
+  template: '<div>A custom component!</div>'
+})
+
+// 局部注册
 const Default = { template: '<div>default</div>' }
 const Foo = { template: '<div>foo</div>' }
 const Bar = { template: '<div>bar</div>' }
