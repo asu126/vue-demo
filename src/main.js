@@ -45,6 +45,21 @@ Vue.component('my-component', {
   template: '<div>A custom component!</div>'
 })
 
+Vue.component('button-counter', {
+  template: '<button v-on:click="incrementCounter">{{ counter }}</button>',
+  data: function () {
+    return {
+      counter: 0
+    }
+  },
+  methods: {
+    incrementCounter: function () {
+      this.counter += 1
+      this.$emit('increment')
+    }
+  },
+})
+
 // 局部注册
 const Default = { template: '<div>default</div>' }
 const Foo = { template: '<div>foo</div>' }

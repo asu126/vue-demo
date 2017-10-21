@@ -35,6 +35,10 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 # routr vue
 https://router.vuejs.org/zh-cn/essentials/getting-started.html
 
+
+# Bootstrap + Vue
+https://bootstrap-vue.js.org/
+
 # more demo reference
 - https://github.com/lzxb/vue2-demo 登录退出功能
 - https://github.com/kenberkeley/vue-demo 简易留言板

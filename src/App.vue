@@ -100,6 +100,12 @@
       <my-component></my-component>
     </div>
 
+    <div id="counter-event-example">
+      <p>{{ total }}</p>
+      <button-counter v-on:increment="incrementTotal"></button-counter>
+      <button-counter v-on:increment="incrementTotal"></button-counter>
+    </div>
+
   </div>
 </template>
 <script>
@@ -127,6 +133,7 @@ export default {
     picked: '',
     selected: '',
     selecteds: [],
+    total: 0,
     items: [
       { message: 'Foo' },
       { message: 'Bar' }
@@ -142,8 +149,12 @@ export default {
       if (event) {
         alert(event.target.tagName)
       }
+    },
+    incrementTotal: function () {
+      this.total += 1
     }
   }
+
 }
 </script>
 <style>
