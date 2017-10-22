@@ -27,6 +27,9 @@ import Charts from '@/views/Charts'
 // import Login from '@/views/pages/Login'
 // import Register from '@/views/pages/Register'
 
+// Views - Select2
+import Select2 from '@/views/Select2'
+
 Vue.use(Router)
 
 export default new Router({
@@ -49,6 +52,11 @@ export default new Router({
           path: 'charts',
           name: 'Charts',
           component: Charts
+        },
+        {
+          path: 'select2',
+          name: 'Select2',
+          component: Select2
         }
       ]
     }

@@ -10,7 +10,7 @@
     </b-nav>
     <b-nav is-nav-bar class="ml-auto">
       <b-nav-item class="d-md-down-none">
-        <i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span>
+        <i class="icon-bell"></i><span class="badge badge-pill badge-danger">66</span>
       </b-nav-item>
       <b-nav-item class="d-md-down-none">
         <i class="icon-list"></i>
