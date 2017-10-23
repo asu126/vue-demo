@@ -5,9 +5,11 @@ import BootstrapVue from 'bootstrap-vue'
 import App from './App'
 import router from './router'
 import VueResource from 'vue-resource'
+import vCode from './components/Code'
 
 Vue.use(BootstrapVue)
 Vue.use(VueResource)
+Vue.component('v-code', vCode)
 
 /* eslint-disable no-new */
 new Vue({

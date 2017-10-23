@@ -11,23 +11,27 @@
     <v-select label="value" :options="countries1"></v-select>
 
     <h5>On-Change Callback</h5>
-    <v-select on-change="consoleCallback" :options="countries2"></v-select>
+    <OnChangeCallback></OnChangeCallback>
+
 
     <h5>AJAX Remote Option Loading</h5>
     <v-select
-	:debounce="250"
-	:on-search="getOptions"
-	:options="search"
-	placeholder="Search GitHub Repositories..."
-	label="full_name"
+  	:debounce="250"
+  	:on-search="getOptions"
+  	:options="search"
+  	placeholder="Search GitHub Repositories..."
+  	label="full_name"
     > </v-select>
 
   </div>
 </template>
 <script>
 import vSelect from 'vue-select'
+import OnChangeCallback from './select2/OnChangeCallback'
+
 export default {
-  components: {vSelect},
+
+  components: {vSelect, OnChangeCallback},
   data () {
     return {
       selected: 'foo',
@@ -39,14 +43,6 @@ export default {
     }
   },
   methods: {
-    consoleCallback (val) {
-      console.dir(JSON.stringify(val))
-    },
-
-    alertCallback (val) {
-      alert(JSON.stringify(val))
-    },
-
     getOptions (search, loading) {
       loading(true)
       this.$http.get('https://api.github.com/search/repositories', {
