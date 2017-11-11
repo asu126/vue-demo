@@ -30,6 +30,9 @@ import Charts from '@/views/Charts'
 // Views - Select2
 import Select2 from '@/views/Select2'
 
+// views Login
+import Login from '@/views/login'
+
 Vue.use(Router)
 
 export default new Router({
@@ -39,7 +42,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/dashboard',
+      redirect: '/Login',
       name: 'Home',
       component: Full,
       children: [
@@ -59,6 +62,10 @@ export default new Router({
           component: Select2
         }
       ]
+    },
+    {
+      path: '/Login',
+      component: Login
     }
   ]
 })

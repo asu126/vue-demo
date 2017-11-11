@@ -51,10 +51,10 @@ export default {
      * custom label key can be set with the `label` prop.
      * @type {Array}
     */
-    options: {
-      type: Array,
-      default () { return [] }
-    },
+    // options: {
+    //   type: Array,
+    //   default () { return [] }
+    // },
 
     /**
      * Enable/disable filtering the options.
@@ -133,7 +133,7 @@ export default {
     }
   },
   methods: {
-    getOptions (search, loading) {
+    getOptions (search, loading) { // 71f482f783aaf36a5a06690ab404c9fb12948a09 
       loading(true)
       this.$http.get('https://api.github.com/search/repositories', {
         q: search
