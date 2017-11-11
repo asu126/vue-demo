@@ -30,6 +30,9 @@ import Charts from '@/views/Charts'
 // Views - Select2
 import Select2 from '@/views/Select2'
 
+// Highlight
+import Highlight from '@/views/Highlight'
+
 // views Login
 import Login from '@/views/login'
 
@@ -60,6 +63,11 @@ export default new Router({
           path: 'select2',
           name: 'Select2',
           component: Select2
+        },
+        {
+          path: 'highlight',
+          name: 'Highlight',
+          component: Highlight
         }
       ]
     },

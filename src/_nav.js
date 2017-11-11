@@ -22,6 +22,11 @@ export default {
       name: 'Select2',
       url: '/select2',
       icon: 'icon-pie-chart'
+    },
+    {
+      name: 'Highlight',
+      url: '/highlight',
+      icon: 'icon-pie-chart'
     }
   ]
 }

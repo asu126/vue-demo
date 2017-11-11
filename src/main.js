@@ -7,6 +7,9 @@ import router from './router'
 import VueResource from 'vue-resource'
 import vCode from './components/Code'
 
+import Highlight from './highlight.js'
+Vue.use(Highlight)
+
 Vue.use(BootstrapVue)
 Vue.use(VueResource)
 Vue.component('v-code', vCode)
