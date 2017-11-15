@@ -33,6 +33,9 @@ import Select2 from '@/views/Select2'
 // Highlight
 import Highlight from '@/views/Highlight'
 
+// ace edit
+import AceEdit from '@/views/vue_edit'
+
 // views Login
 import Login from '@/views/login'
 
@@ -68,6 +71,11 @@ export default new Router({
           path: 'highlight',
           name: 'Highlight',
           component: Highlight
+        },
+        {
+          path: 'ace',
+          name: 'AceEdit',
+          component: AceEdit
         }
       ]
     },

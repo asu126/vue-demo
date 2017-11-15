@@ -27,6 +27,11 @@ export default {
       name: 'Highlight',
       url: '/highlight',
       icon: 'icon-pie-chart'
+    },
+    {
+      name: 'AceEdit',
+      url: '/ace',
+      icon: 'icon-pie-chart'
     }
   ]
 }
