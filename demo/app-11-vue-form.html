@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.js"></script>
+</head>
+<body>
+
+<div id="app-11">
+<input v-model="message" placeholder="edit me">
+<p>Message is: {{ message }}</p>
+	
+<span>Multiline message is:</span>
+<p style="white-space: pre-line;">{{ mm_message }}</p>
+<br>
+<textarea v-model="mm_message" placeholder="add multiple lines"></textarea>
+
+<h5>单个勾选框，逻辑值：</h5>
+<input type="checkbox" id="checkbox" v-model="checked">
+<label for="checkbox">{{ checked }}</label>
+
+</div>
+
+<div id='example-3'>
+  <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+  <label for="jack">Jack</label>
+  <input type="checkbox" id="john" value="John" v-model="checkedNames">
+  <label for="john">John</label>
+  <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+  <label for="mike">Mike</label>
+  <br>
+  <span>Checked names: {{ checkedNames }}</span>
+</div>
+	
+<script>
+var app6 = new Vue({
+  el: '#app-11',
+  data: {
+	message: 'Hello Vue!',
+    mm_message: 'Hello Vue mm!',
+    checked: true
+  }
+})
+
+new Vue({
+  el: '#example-3',
+  data: {
+    checkedNames: ['ss']
+  }
+})
+</script>
+
+</body>
+</html>

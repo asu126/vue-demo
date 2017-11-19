@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例</title>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.js"></script>
+</head>
+<body>
+
+<div id="app8">
+  {{ a }}
+</div>
+	
+<script>
+// 定义名为 todo-item 的新组件
+var app8 = new Vue({
+  el: '#app8',
+  data: {
+    a: 1
+  },
+  beforeCreate: function () {
+    console.log('beforeCreate')
+  },
+  created: function () {
+    // `this` 指向 vm 实例
+	console.log('created')
+    console.log('a is: ' + this.a)
+  }
+})
+	  
+</script>
+
+</body>
+</html>
