@@ -2,6 +2,12 @@
 
 本工程是对 `vue2`的学习，第一部分参考了[vue官方文档](https://cn.vuejs.org/),在没有使用vue-cli(官方脚手架) 的情况下练习了官方文档的一些example, 具体见本工程demo目录。第二部分是基于vue-cli/webpack,在参考[CoreUI Vue](https://github.com/mrholek/CoreUI-Vue)的基本模型下连写了vue的使用，以及select2/highlight等组件的使用。
 
+# Start
+- git clone https://github.com/asu126/vue-demo.git
+- cd vue-demo
+- npm install
+- npm run dev
+
 ![实例](image/demo.png)
 
 ### 下面是一些参考文档
